@@ -10,7 +10,7 @@ def generate_email():
     return f"{first_name}_{last_name}_{cohort_number}@{domain}"
 
 
-def generate_password(length=8):
+def generate_password(length=6):
     characters = string.ascii_letters + string.digits
     password = ''.join(random.choices(characters, k=length))
     return password

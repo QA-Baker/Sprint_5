@@ -20,3 +20,13 @@ def setup_register_page():
     driver.get("https://stellarburgers.nomoreparties.site/register")
     yield driver
     driver.quit()
+
+
+@pytest.fixture
+def setup_login_page():
+    # Инициализация WebDriver для Chrome и открытие страницы авторизации
+    driver = webdriver.Chrome()
+    driver.maximize_window()
+    driver.get("https://stellarburgers.nomoreparties.site/login")
+    yield driver
+    driver.quit()
